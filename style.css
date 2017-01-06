@@ -415,6 +415,52 @@ footer ul {
 	line-height: 2.962962rem;;
 }
 
+.main-foot li {
+	display: block;
+}
+
+footer a {
+	position: relative;
+	transition: color 0.3s;
+	z-index: 2000;
+}
+
+.main-foot a:hover  {
+	color: #fff;
+}
+
+.hov-bg {
+	opacity: 0;
+  position: absolute;
+	width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s;
+  z-index: 0;
+ }
+
+.hov-on .hov-bg {
+	opacity: 0.9;
+}
+
+
+.apollo-hov {
+	 background-color: #323232;
+}
+
+.drive-hov {
+	 background-color: #4e4d8b;
+}
+
+.david-hov {
+	 background-color: #000;
+}
+
+.cod-hov {
+	 background-color: #00b3e6;
+}
+
 
 /* Articles */
 
