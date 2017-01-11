@@ -421,7 +421,7 @@ footer ul {
 
 footer a {
 	position: relative;
-	transition: color 0.3s;
+	transition: color 0.2s;
 	z-index: 2000;
 }
 
@@ -436,29 +436,38 @@ footer a {
   height: 100%;
   top: 0;
   left: 0;
-  transition: opacity 0.3s;
   z-index: 0;
+  transition: all .3s;
+	background-size: auto 102%, auto 102%;
+	background-repeat: no-repeat, no-repeat;
+	background-position: top left, top right;
  }
 
 .hov-on .hov-bg {
-	opacity: 0.9;
+	opacity: 1;
+	background-size:  auto 100%,auto 100%;
 }
 
 
-.apollo-hov {
-	 background-color: #323232;
+.apollo-bg-hov {
+	background-image: url(images/footer/apollo-2400-left.png), url(images/footer/apollo-2400-right.png);
+	background-color: #1c1b1d;
 }
 
-.drive-hov {
-	 background-color: #4e4d8b;
+.drive-bg-hov {
+	background-image: url(images/footer/drive-2400-left.png), url(images/footer/drive-2400-right.png);
+	background-color: #4e4d8b;
 }
 
-.david-hov {
-	 background-color: #000;
+.david-bg-hov {
+	background-image: url(images/footer/stars-2400-left.png), url(images/footer/stars-2400-right.png);
+	background-color: #000000;
 }
 
-.cod-hov {
-	 background-color: #00b3e6;
+.cod-bg-hov {
+	background-position: bottom left, bottom right;
+	background-image: url(images/footer/cod-2400-left.png), url(images/footer/cod-2400-right.png);
+	background-color: #00b3e6;
 }
 
 

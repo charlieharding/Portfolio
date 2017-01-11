@@ -72,8 +72,8 @@ window.onload = function(){
 
 	function closeProject() {
 		document.body.className = "menu-close";
-		proj_wrap.className = "proj-wrap-close wrap";
-		con_wrap.className = "con-wrap-close wrap";
+		if(proj_wrap.className == "proj-wrap-open wrap"){proj_wrap.className = "proj-wrap-close wrap";}
+		if(con_wrap.className == "con-wrap-open wrap"){con_wrap.className = "con-wrap-close wrap";}
 		proj_li.className = "";
 		con_li.className = "";
 	}
