@@ -539,7 +539,7 @@ article li {
 }
 
 
-article img {
+article img, article video {
 	max-width: 75vw;
 	max-height: 80vh;
 	position: absolute;
