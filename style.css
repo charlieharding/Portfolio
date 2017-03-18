@@ -529,6 +529,10 @@ article li {
 	background-color: #04bcbc;
 }
 
+.cod-images li {
+	background-color: #ccf0fa;
+}
+
 .apollo-images li {
 	background-color: #f4eae5;
 }
@@ -564,7 +568,7 @@ article img, article video {
   background-position-y: center;
 }
 
-.mobile-images img {
+.mobile-images img, .mobile-images video  {
 	max-width: 25vw;
 	max-height: 70vh;
 	position: relative;
@@ -584,7 +588,22 @@ article img, article video {
   justify-content: space-between;
   padding-left: 5vw;
   padding-right: 5vw;
+}
 
+.long-images li {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	height: initial;
+	max-height: none;
+}
+
+.long-images img {
+	width: 75vw;
+	max-width: 1000px;
+	max-height: none;
+	position: relative;
+	transform: translate(-50%, 0);
+	top: 0;
 }
 
 .case-text {
