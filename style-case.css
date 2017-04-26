@@ -1,0 +1,232 @@
+
+/* Articles */
+
+/* Typography */
+
+h1 {
+	font-size: 5.96rem;
+	line-height: 6.25rem; 
+	color: #fff;
+	margin: 0 0 47px 0;
+	padding: 0;
+}
+
+.lead {
+	font-size: 1.563em;
+	font-weight: normal;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.lead p {
+	padding-bottom: 75px; 
+}
+
+h2 {
+	font-size: 1.953em;
+}
+
+h3 {
+	font-size: 2.075rem;
+	font-weight: normal;
+	line-height: 1.355;
+	margin: 0 0 5.5rem 0;
+}
+
+
+h4 {
+	font-size: 1.25rem;
+	margin: 0 0 0.9375rem 0;
+}
+
+.pull {
+	display: block;
+	position: relative;
+}
+
+.pull-rule {
+	box-sizing: border-box;
+	width: 0.375rem;
+	height: 100%;
+	margin-left: -0.375rem;
+	padding: .5em 0;
+	left: -2.777776vw;
+	position: absolute;
+}
+.pull-rule span{
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: #292e36;
+}
+
+/* Case-study header*/
+
+.case-header{
+	padding-top: 136px;
+	padding-bottom: 80px;
+	background-color: #1D2126;
+	min-height: 95vh;
+}
+
+.out {
+	display: inline-block;
+	font-weight: normal;
+	color: #fff;
+	font-size: 1.16rem;
+	text-decoration: none;
+	line-height: 1;
+	border-bottom: solid 4px;
+	padding: 0 0 .2em;
+}
+
+.out svg { 
+	fill: currentColor;
+	height: 1em;
+	width: 1em;
+	margin-left: .2em;
+}
+
+.out:hover {
+	border-bottom: solid 4px #f00;
+	color: #f00;
+}
+
+/* Case-study body */
+
+.case-study {
+	margin: -10vh 0 0 0;
+}
+
+.case-text {
+	margin-top: 125px;	
+	margin-bottom: 125px;	
+}
+
+.text-columns p {
+	padding-bottom: 0.9375rem;
+}
+
+.text-columns{
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-moz-column-gap: 2.777776vw;
+	-webkit-column-gap: 2.777776vw;
+	column-gap: 2.777776vw;
+}
+
+article ul {
+	box-sizing: border-box;
+	padding: 5vh 0;
+	margin: 0 1.388888%;
+}
+
+article li {
+	width: 100%;
+	height: 90vh;
+	max-height: 60vw;
+	position: relative;
+}
+
+article li img {
+	max-width: 75vw;
+	max-height: 80vh;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.2);
+}
+
+.apollo-images ul {
+	background-color: #F6E8DF;
+}
+
+/*
+.multiple-images li:nth-child(2) {
+	padding-top: 15vh;
+}
+
+.multiple-images li:last-child {
+	padding-bottom: 15vh;
+}
+
+.drive-images li {
+	background-color: #04bcbc;
+}
+
+.cod-images li {
+	background-color: #ccf0fa;
+}
+
+
+.david-images li {
+	background-color: #dce0f5;
+}
+
+article img, article video {
+	max-width: 75vw;
+	max-height: 80vh;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	box-shadow: 0px 0px 60px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mission-image {
+	background-image: url(images/apollo/mission-set.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.lander-image {
+	background-image: url(images/david/lander_1920.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.mobile-images img, .mobile-images video  {
+	max-width: 25vw;
+	max-height: 70vh;
+	position: relative;
+	transform: translate(0, 0);
+	top: initial;
+	left: initial;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	box-shadow: 0px 0px 60px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-images li {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.long-images li {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	height: initial;
+	max-height: none;
+}
+
+.long-images img {
+	width: 75vw;
+	max-width: 1000px;
+	max-height: none;
+	position: relative;
+	transform: translate(-50%, 0);
+	top: 0;
+}
+
+*/

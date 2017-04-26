@@ -1,7 +1,8 @@
 window.onload = function(){
 
 	var proj_wrap, con_wrap, proj_link, con_link, proj_li, con_li, proj_close_svg, con_close_svg
-	var apollo_hov, drive_hov, david_hov, cod_hov; 
+	var apollo_hov, drive_hov, david_hov, cod_hov;
+	var hover_list = [];
 
 	function setElements(){
 		//Main nav
@@ -23,33 +24,34 @@ window.onload = function(){
 		drive_hov = document.getElementById("drive-hov");
 		david_hov = document.getElementById("david-hov");
 		cod_hov = document.getElementById("cod-hov");
+		hover_list.push(apollo_hov, drive_hov, david_hov, cod_hov);
 
 		apollo_hov.addEventListener("mouseenter", function(event){
-			hoverIn(apollo_hov);
+			hover(apollo_hov, true);
 		});
 		apollo_hov.addEventListener("mouseout", function(event){
-			hoverOut(apollo_hov);
+			hover(apollo_hov, false);
 		});
 
 		drive_hov.addEventListener("mouseenter", function(event){
-			hoverIn(drive_hov);
+			hover(drive_hov, true);
 		});
 		drive_hov.addEventListener("mouseout", function(event){
-			hoverOut(drive_hov);
+			hover(drive_hov, false);
 		});
 
 		david_hov.addEventListener("mouseenter", function(event){
-			hoverIn(david_hov);
+			hover(david_hov, true);
 		});
 		david_hov.addEventListener("mouseout", function(event){
-			hoverOut(david_hov);
+			hover(david_hov, false);
 		});
 
 		cod_hov.addEventListener("mouseenter", function(event){
-			hoverIn(cod_hov);
+			hover(cod_hov, true);
 		});
 		cod_hov.addEventListener("mouseout", function(event){
-			hoverOut(cod_hov);
+			hover(cod_hov, false);
 		});
 
 	}
@@ -77,13 +79,18 @@ window.onload = function(){
 		proj_li.className = "";
 		con_li.className = "";
 	}
-
-	function hoverIn(el){
-		el.parentElement.className = 'hov-on';
-	}
-
-	function hoverOut(el){
-		el.parentElement.className = '';
+	function hover(el, x){
+		//el.parentElement.className = 'hov-on';
+		for(i=0; i < hover_list.length; i++){
+			if(x){
+				if(el != hover_list[i]){
+					hover_list[i].className = 'hov-on';
+				}
+			}else{
+				hover_list[i].className = '';
+			}
+		}
+		
 	}
 
 	setElements();
