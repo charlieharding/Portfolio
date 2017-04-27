@@ -79,6 +79,10 @@ ul, p {
 	width: 14.285714%;
 }
 
+.col-3 {
+	width: 21.428571%;
+}
+
 .col-5 {
 	width: 35.714285%;
 }
@@ -185,20 +189,10 @@ nav svg {
 body.menu-open {
 	overflow: hidden;
 }
-
-.menu-open #top-nav a {
-	color: #fff;
-	animation: 0.3s textOut;
-} 
-
+ 
 .menu-open #top-nav a:hover {
 	color: #f00;
 } 
-
-.menu-close #top-nav a {
-	color: #292e36;
-	animation: 0.6s textIn;
-}
 
 #menu-contain {
 	height: 0;
@@ -220,42 +214,83 @@ body.menu-open {
 }
 
 #project-wrap ul {
-	margin-top: 6.43rem;
-	font-size: 3.815rem;
+	font-size: 10vh;
+	line-height: 16vh; 
 	visibility: hidden;
+	position: absolute;
+	top: 50%;
 }
 
 #contact-wrap a {
-	font-size: 3.815rem;
 	opacity: 0;
   display: inline-block;
-  line-height: 4rem;
-  margin-top: -2rem;
+	font-size: 10vh;
+	line-height: 16vh; 
   top: 50%;
   position: absolute;
   visibility: hidden;
+  text-decoration: none;
+  color: #fff;
 }
 
-#project-wrap.proj-wrap-open ul, #contact-wrap.con-wrap-open a {
-	transform: translateY(0);
+#contact-wrap a:vistied {
+	color: #fff;
+}
+
+#contact-wrap a:hover {
+	color: #f00;
+}
+
+#project-wrap.proj-wrap-open ul {
+	transform: translateY(-50%);
 	opacity: 1;
 	animation: 0.8s slideDown ease-out;
 	visibility: visible;
 }
 
-#project-wrap.proj-wrap-close ul, #contact-wrap.con-wrap-close a {
-	transform: translateY(-.5em);
+#contact-wrap.con-wrap-open a {
+	transform: translateY(-50%);
+	opacity: 1;
+	animation: 0.8s slideDownSml ease-out;
+	visibility: visible;
+}
+
+#project-wrap.proj-wrap-close ul {
+	transform: translateY(-50%);
 	opacity: 0;
 	visibility: hidden;
 	animation: 0.4s slideUp ease-in;
+}
+
+#contact-wrap.con-wrap-close a {
+	transform: translateY(-50%);
+	opacity: 0;
+	visibility: hidden;
+	animation: 0.4s slideUpSml ease-in;
+}
+
+#project-wrap span {
+	position: absolute;
+	width: 120%;
+	height: 1.6vh;
+	background-color: currentColor;
+	transform: translate(-50%, -30%);
+	top: 50%;
+	left: 50%;
 }
 
 #menu-contain li {
 	margin-left: -0.06em;
 }
 
-#menu-contain a {
+.nav-link a {
 	color: #fff;
+	position: relative;
+	text-decoration: none;
+}
+
+.active-nav a:hover {
+	color: #f00;
 }
 
 .link-open a {
@@ -329,16 +364,16 @@ body.menu-open {
 
 @keyframes slideDown {
 	0%{
-		transform: translateY(-.5em);
+		transform: translateY(-55%);
 		opacity: 0;
 		visibility: hidden;
 	}
 	50%{
-		transform: translateY(-.5em);
+		transform: translateY(-55%);
 		opacity: 0;
 	}
 	to {
-		transform: translateY(0);
+		transform: translateY(-50%);
 		opacity: 1;
 		visibility: visible;
 	}
@@ -346,35 +381,44 @@ body.menu-open {
 
 @keyframes slideUp {
 	from{
-		transform: translateY(0);
+		transform: translateY(-50%);
 		opacity: 1;
 		visibility: visible;
 	}
 	to {
-		transform: translateY(-.5em);
+		transform: translateY(-55%);
 		opacity: 0;
 		visibility: hidden;
 	}
 }
 
-@keyframes textOut {
-	from{
-		color: #292e36;
+@keyframes slideDownSml {
+	0%{
+		transform: translateY(-80%);
+		opacity: 0;
+		visibility: hidden;
+	}
+	50%{
+		transform: translateY(-80%);
+		opacity: 0;
 	}
 	to {
-		color: #fff;
+		transform: translateY(-50%);
+		opacity: 1;
+		visibility: visible;
 	}
 }
 
-@keyframes textIn {
-	0% {
-		color: #fff;
+@keyframes slideUpSml {
+	from{
+		transform: translateY(-50%);
+		opacity: 1;
+		visibility: visible;
 	}
-	50% {
-		color: #fff;
-	}
-	100% {
-		color: #292e36;
+	to {
+		transform: translateY(-80%);
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 
