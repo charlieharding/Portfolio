@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'KievitOTRegular';
+    src: url('kievitot-regular.eot');
+    src: url('kievitot-regular.eot') format('embedded-opentype'),
+         url('kievitot-regular.woff') format('woff'),
+         url('kievitot-regular.ttf') format('truetype'),
+         url('kievitot-regular.svg#KievitOTRegular') format('svg');
+}

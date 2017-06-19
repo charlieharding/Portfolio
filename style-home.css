@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	background-color: #1D2126;
+}
+
+h1 {
+	color: #fff;
+	font-size: 3.815rem;
+	font-weight: normal;
+	line-height: 1.2288;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	color: #fff;
+	font-weight: normal;
+	font-size: 1.563rem;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+#description {
+	background-color: #1D2126;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+#description h1 {
+	padding-top: 20vh;
+	padding-bottom: 12vh;
+	position: relative;
+	z-index: 1000;
+}
+
+#description h2 {
+	float :left;
+}
+
+#description a {
+	text-decoration: none;
+}
+
+.big a, .social a {
+	color: #fff;
+}
+
+#sub-text {
+	position: relative;
+	overflow: auto;
+	margin-bottom: 10vh;
+
+}
+
+.social {
+	font-size: 1rem;
+	line-height: 2.1875;
+	float: left;
+	padding-top: .25rem;
+}
+
+.social a {
+	text-decoration: none;
+}
+
+.reveal {
+	transition: all .5s;
+	width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 100;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.home-hov-on * {
+	opacity: 0.1;
+}
+
+.triggered {
+	opacity: 1;
+}
+
+.text-reveal {
+	color: #fff;
+	z-index: 1000;
+	position: absolute;
+	opacity: 0;
+}
+
+#drive-home {
+	transform: translate(-2%) scale(1.05);
+	background-size: auto 105%;
+  background-image: url(assets/home/drive.svg);
+  background-color: #4E4D8B;
+	background-position: 90% 0%;
+}
+
+#david-home {
+	transform: translate(0) scale(1.05);
+	background-size: cover;
+  background-image: url(assets/home/david.png);
+  background-color: #000;
+	background-position: right bottom;
+}
+
+#apollo-home {
+	transform: translateY(2%) scale(1.05);
+	background-size: auto 75%;
+  background-image: url(assets/home/apollo.svg);
+  background-color: #1C1B1D;
+	background-position: left bottom;
+}
+
+#cod-home {
+	transform: translateY(0) scale(1);
+	background-size: auto 100%;
+  background-image: url(assets/home/cod.png);
+  background-color: #CAF0FA;
+	background-position: right bottom;
+}
+
+#drive-trigger:hover .drive-home {
+	opacity: 1;
+	background-size: auto 100%;
+}
+
+.underline a {
+  border-bottom: 4px solid currentColor;
+  display: inline-block;
+  line-height: 0.95;
+}
+
+.underline a:first-of-type {
+	transition: text-shadow 0.5s;
+  text-shadow:
+  4px 4px #1D2126,
+  4px -4px #1D2126,
+  -4px 4px #1D2126,
+  -4px -4px #1D2126;
+}
+
+.drive-show #drive-home {
+	transform: translate(0) scale(1);
+	opacity: 1;
+}
+
+.drive-show #drive-text {
+	transition: opacity .5s .3s;
+	opacity: 1;
+}
+
+.drive-show .underline a:first-of-type {
+	text-shadow:
+  4px 4px #4E4D8B,
+  4px -4px #4E4D8B,
+  -4px 4px #4E4D8B,
+  -4px -4px #4E4D8B;
+}
+
+.david-show #david-home {
+	transform: translate(0) scale(1);
+	opacity: 1;
+}
+
+.david-show #david-text {
+	transition: opacity .5s .3s;
+	opacity: 1;
+}
+
+.david-show .underline a:first-of-type {
+	text-shadow:
+  4px 4px #000,
+  4px -4px #000,
+  -4px 4px #000,
+  -4px -4px #000;
+}
+
+.apollo-show #apollo-home {
+	transform: translate(0) scale(1);
+	opacity: 1;
+}
+
+.apollo-show #apollo-text {
+	transition: opacity .5s .3s;
+	opacity: 1;
+}
+
+.apollo-show .underline a:first-of-type {
+	text-shadow:
+  4px 4px #1C1B1D,
+  4px -4px #1C1B1D,
+  -4px 4px #1C1B1D,
+  -4px -4px #1C1B1D;
+}
+
+#cod-home svg {
+	float: right;
+	height: 100%;
+  width: auto;
+}
+
+#route {
+	transition: stroke-dashoffset 4s;
+	stroke-dasharray: 860;
+	stroke-dashoffset: -400;
+}
+
+.cod-show #cod-home {
+	transform: translate(0) scale(1);
+	opacity: 1;
+}
+
+.cod-show #cod-text {
+	transition: opacity .5s .3s;
+	opacity: 1;
+}
+
+.cod-show #route {
+	stroke-dashoffset: 0;
+}
+
+.cod-show h1, .cod-show a, .cod-show .text-reveal {
+	color: #1D2126;
+}
+
+.cod-show .underline a:first-of-type {
+	text-shadow:
+  4px 4px #CAF0FA,
+  4px -4px #CAF0FA,
+  -4px 4px #CAF0FA,
+  -4px -4px #CAF0FA;
+}
+
+
+.re-hide .hidden {
+	transition: all .4s .2s;
+}
+
+.re-hide .text-reveal {
+	transition: opacity .5s;
+}
+
+.re-hide .underline a:first-of-type {
+	transition: text-shadow 0.4s 0.2s;
+}
+
+@media (max-width: 1200px){
+	.big {
+		width: 85.7142857%;
+	}
+}
+
+@media (max-width: 1000px){
+	.big {
+		font-size: 5.7vw;
+	}
+	.me {
+		margin-left: 7.142857%;
+		width: 57.142857%;
+	}
+}
+
+@media (max-width: 1000px){
+	.big {
+		font-size: 5.7vw;
+	}
+	.me {
+		margin-left: 7.142857%;
+		width: 57.142857%;
+	}
+}

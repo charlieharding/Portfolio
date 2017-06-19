@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'KievitOTLight';
+    src: url('kievitot-light.eot');
+    src: url('kievitot-light.eot') format('embedded-opentype'),
+         url('kievitot-light.woff') format('woff'),
+         url('kievitot-light.ttf') format('truetype'),
+         url('kievitot-light.svg#KievitOTLight') format('svg');
+}

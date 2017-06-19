@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAVID 6</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" href="images/favicon.gif"  />
+<link href="sheet.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="libs/kinetic-v4.5.5.min.js"></script>
+<script type="text/javascript" src="libs/preloadjs-0.3.1.min.js"></script>
+<script type="text/javascript" src="webScript.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+
+
+<header>
+	<ul>
+		<li><a href='index.html'>HOME</a></li>
+		<li><a class='activeNav' href='missions.html'>MISSIONS</a></li>		
+		<li><a href='help.html'>HELP</a></li>
+		<li><a href='userDanCollins.html'>LOG IN</a></li>
+		<li><a class='playButton' href='#'>PLAY!</a></li>
+	</ul>
+</header>
+<div id='wrap'>
+	<div class='page'>
+		<div class='content2'>
+			<div class='missWrap left columns6'>
+				<div class='left columns2 missionCreate'>
+					<h1>Mission creator</h1>
+					<input class='columns2' type="text" name="inTitle" value='The gauntlet'>
+					<h2>Mission title</h2>
+					<textarea rows="5" cols="50" class='columns2' name="inDesc">Move David through a series of puzzles growing rapidly in complexity.</textarea>
+					<h2>Mission discription</h2>
+					<a class='publish button pixel left columns1' href='#'>Publish</a>
+					<div id='publishBox' class='left columns2'>
+						<h1>Mission published!</h1>
+						<a href='#' class='columns1 twitter button left pixel'>Tweet</a>
+						<a href='#' class='columns1 facebook button left pixel clear'>Share</a>
+					</div>
+				</div>
+				<div class='right columns4 missionCreate'>
+					<img class='columns4 overV' src='images/overview.gif'>
+					<a class='sectButton button pixel left columns1' href='#'>Add section</a>
+				</div>
+			</div>
+			<div class='columns6 left newSect missionCreate'>
+				<h1>New Section</h1>
+				<div class='left columns2 missionCreate'>
+					<input class='columns2' type="text" name="inTitle" value='Dead-end'>
+					<h2>Section title</h2>
+					<textarea rows="5" cols="50" class='columns2' name="inDesc">Collect a water sample before moving on.</textarea>
+					<h2>Section discription</h2>
+					<div class='editTile'>
+						<h1>Edit tile</h1>
+						<ul class='columns1'>
+							<li class='button' id='terrain'>Terrain</li>
+							<li class='button' id='davids'>Davids</li>
+							<li class='button' id='samples'>Samples</li>
+							<li class='button' id='misc'>Misc</li>
+						</ul>
+						<div class='tileHold columns1 right'>
+							<div class='tileCrop columns1 '>
+								<img id='tileImage' style='left: 0; top: 0' src='images/terrain.png'>
+							</div>
+							<div class='leftArrow'>
+							</div>
+							<a href='#' class='button pixel rotate'>Rotate</a>
+							<div class='rightArrow'>
+								<img>
+							</div>
+						</div>
+					</div>
+					<h2 class='track left columns2'>Sound track</h2>
+					<select>
+						<option value="Intro">Intro</option>
+						<option value="Discovery">Discovery</option>
+						<option value="Curiosity">Curiosity</option>
+						<option value="Trapped">Trapped</option>
+						<option value="Tundra">Tundra</option>
+					</select>
+				</div>
+				<div class='right columns4 missionCreate'>
+					<img class='columns4' src='images/newSect.gif'>
+					<a class='sectButton button pixel left columns1' href='#'>Save section</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	<footer>
+		<div class='footWrap'>
+			<div class='columns2 left white'>
+				<h1>Credits</h1>
+				<h2>Charlie Harding</h2>
+				<p>Design & development</p>
+				<h2>Amand Gerbault-Gaylor</h2>
+				<p>Music & sound</p>
+			</div>
+			<div class='columns4 right white'>
+			<h1>You might want to check these out too</h1>
+				<div class='left columns2'>
+					<a href='http://scratch.mit.edu/' target='_blank' class='left whiteButton scratch white pixel columns1'>Scratch</a>
+					<p class='left columns2'>Create stories, games, and animations to share with others around the world</p>
+				</div>
+				<div class='right columns2'>
+					<a href='http://www.codecademy.com/' target='_blank' class='left whiteButton scratch white pixel columns1'>Codecademy</a>
+					<p class='left columns2'>Learn to code interactively, for free. You even earn badges. Badges!</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+
+
+<div id='DavidSix'>
+	<img src="images/loading.gif" id="loading">
+</div>
+<div id='exit'>
+	<a class='exitButton pixel' href='#'>X</a>
+</div>
+
+</body>
+</html>

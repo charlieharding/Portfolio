@@ -2,6 +2,7 @@ window.onload = function(){
 
 	var proj_wrap, con_wrap, proj_link, con_link, proj_li, con_li, proj_close_svg, con_close_svg
 	var apollo_hov, drive_hov, david_hov, cod_hov;
+	var drive_trigger, david_trigger, cod_trigger, apollo_trigger, drive_home, david_home, cod_home, apollo_home, bigtext_wrap;
 	var hover_list = [];
 
 	function setElements(){
@@ -18,6 +19,59 @@ window.onload = function(){
 		con_close_svg = document.getElementById("contact-close-svg");
 		con_link.onclick = openContact;
 		con_close_svg.onclick = closeProject;
+
+		//Homepage hovers
+		drive_trigger = {
+			anchor: document.getElementById("drive-trigger"),
+			class_replace: 'drive-show'
+		}
+		david_trigger = {
+			anchor: document.getElementById("david-trigger"),
+			class_replace: 'david-show'
+		}
+		cod_trigger = {
+			anchor: document.getElementById("cod-trigger"),
+			class_replace: 'cod-show'
+		}
+		apollo_trigger = {
+			anchor: document.getElementById("apollo-trigger"),
+			class_replace: 'apollo-show'
+		}
+		drive_home = document.getElementById("drive-home");
+		david_home = document.getElementById("david-home");
+		cod_home = document.getElementById("cod-home");
+		apollo_home = document.getElementById("apollo-home");
+		description = document.getElementById("description");
+		bigtext_wrap = document.getElementById("bigtext-wrap");
+		//drive_trigger = document.getElementById("drive-trigger");
+
+		drive_trigger.anchor.addEventListener("mouseenter", function(event){
+			home_hover(drive_trigger, true);
+		});
+		drive_trigger.anchor.addEventListener("mouseout", function(event){
+			home_hover(drive_trigger, false);
+		});
+
+		david_trigger.anchor.addEventListener("mouseenter", function(event){
+			home_hover(david_trigger, true);
+		});
+		david_trigger.anchor.addEventListener("mouseout", function(event){
+			home_hover(david_trigger, false);
+		});
+
+		cod_trigger.anchor.addEventListener("mouseenter", function(event){
+			home_hover(cod_trigger, true);
+		});
+		cod_trigger.anchor.addEventListener("mouseout", function(event){
+			home_hover(cod_trigger, false);
+		});
+
+		apollo_trigger.anchor.addEventListener("mouseenter", function(event){
+			home_hover(apollo_trigger, true);
+		});
+		apollo_trigger.anchor.addEventListener("mouseout", function(event){
+			home_hover(apollo_trigger, false);
+		});
 
 		//Footer hovers
 		apollo_hov = document.getElementById("apollo-hov");
@@ -53,7 +107,6 @@ window.onload = function(){
 		cod_hov.addEventListener("mouseout", function(event){
 			hover(cod_hov, false);
 		});
-
 	}
 
 	function openProject() {
@@ -79,6 +132,7 @@ window.onload = function(){
 		proj_li.className = "";
 		con_li.className = "";
 	}
+
 	function hover(el, x){
 		//el.parentElement.className = 'hov-on';
 		for(i=0; i < hover_list.length; i++){
@@ -90,8 +144,21 @@ window.onload = function(){
 				hover_list[i].className = '';
 			}
 		}
-		
 	}
+
+	function home_hover(el, x){
+		//el.parentElement.className = 'hov-on';
+		if(x){
+			el.anchor.className = 'triggered';
+			bigtext_wrap.className = 'home-hov-on';
+			description.className = el.class_replace + ' ' + 'wrap';
+		}else{
+			el.anchor.className = '';
+			bigtext_wrap.className = '';
+			description.className = 're-hide wrap';
+		}
+	}
+
 
 	setElements();
 	//console.log('text')

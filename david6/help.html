@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DAVID 6</title>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" href="images/favicon.gif"  />
+<link href="sheet.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="libs/kinetic-v4.5.5.min.js"></script>
+<script type="text/javascript" src="libs/preloadjs-0.3.1.min.js"></script>
+<script type="text/javascript" src="webScript.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+	<header>
+		<ul>
+			<li><a href='index.html'>HOME</a></li>
+			<li><a href='missions.html'>MISSIONS</a></li>		
+			<li><a class='activeNav' href='#'>HELP</a></li>
+			<li><a href='userDanCollins.html'>LOG IN</a></li>
+			<li><a class='playButton' href='#'>PLAY!</a></li>
+			</ul>
+	</header>
+
+	<div id='wrap'>
+		<div class='page help-1'>
+			<div class='content'>
+				<div class='columns3 left'>
+					<h1>Move through each of the sections that make up the missions by sending your David a script.</h1>
+					<h2>Combine commands in the form of blocks into a script.</h2>
+					<h2>Once you've sent the script to David he will carry out the commands one-by-one. If he reaches the orange endpoint he can advance to the next section.</h2>
+					<a href='#' class='pixel nextButton invert columns1 left' id='help-2'>next</a>
+				</div>
+				<img class='columns3 right' src='images/level.gif'>
+				<p class='columns3 right sectionCaption clear'>A example of a 5x5 section.</p>
+			</div>
+		</div>
+		<div class='page help-2' id='Script'>
+			<div class='content2'>
+				<h1 class='white'>Building the script</h1>
+				<div class='columns2 white left flowItem'>
+					<p class='number pixel'>1</p>
+					<span class='flowImg'>
+						<img src='images/action.png'>
+					</span>
+					<span class='flowDes'>
+						<p class='black flowHead'>Select a block from the action bar.</p>
+						<p>These blocks represent functions made of code that a David can understand.</p>
+					</span>
+					<span class='flowCode'>
+					<a href='#' class='codeButton'>MORE</a>
+						<div class='hideCode'>
+							<p class='black flowHead'>A ‘FD’ Block takes the place of the forward function.</p>
+							<p class='code'>function forward() {
+								<br><span class='tab'></span>var dis;
+								<br><span class='tab'></span>david.wheel.right(dis);
+								<br><span class='tab'></span>david.wheel.left(dis);
+								<br>}
+							</p>
+						</div>
+						<a href='#' class='pixel nextButton white columns1 left mag' id='help-3'>next</a>
+					</span>
+				</div>
+				<div class='columns2 white left flowItem'>
+					<p class='number pixel'>2</p>
+					<span class='flowImg'><img src='images/edit.png'></span>
+					<span class='flowDes'>
+						<p class='black flowHead'>Attach values to blocks.</p>
+						<p>Change what they do by dragging them into the edit zone.</p>
+					</span>
+					<span class='flowCode'>
+						<a href='#' class='codeButton'>MORE</a>
+						<div class='hideCode'>
+							<p class='black flowHead'>The values are like variables passed into the function.</p>
+							<p class='code'>function forward(2) {
+								<br><span class='tab'></span>var dis = 2;
+								<br><span class='tab'></span>david.wheel.right(dis);
+								<br><span class='tab'></span>david.wheel.left(dis);
+								<br>}
+							</p>
+						</div>
+					</span>
+				</div>
+				<div class='columns2 white left'>
+					<p class='number pixel'>3</p>
+					<span class='flowImg'><img src='images/script.png'></span>
+					<span class='flowDes'>
+						<p class='black flowHead'>Create a script by snapping blocks into the available slots.</p>
+						<p>There is a limit to how many blocks David can receive. This can be expanded with upgrades.</p>
+					</span>
+					<span class='flowCode'>
+						<a href='#' class='codeButton'>MORE</a>
+						<div class='hideCode'>
+							<p class='black flowHead'>The script is the  all the code sent to David.</p>
+							<p class='code'>function script() {
+								<br><span class='tab'></span>function forward(2) {
+								<br><span class='tab'></span><span class='tab'></span>var dis = 2 * grid.width;
+								<br><span class='tab'></span><span class='tab'></span>david.wheel.right(dis);
+								<br><span class='tab'></span><span class='tab'></span>david.wheel.left(dis);
+								<br><span class='tab'></span>}
+								<br><span class='tab'></span>function right(1) {
+								<br><span class='tab'></span><span class='tab'></span>var deg = 1 * 90;
+								<br><span class='tab'></span><span class='tab'></span>david.wheel.right(-deg);
+								<br><span class='tab'></span><span class='tab'></span>david.wheel.left(deg);
+								<br><span class='tab'></span>}
+								<br>}
+							</p>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class='page help-3' id='Blocks'>
+			<div class='content2'>
+				<h1>Blocks</h1>
+				<div class='columns3 blockType firstBlockType'>
+					<div class='blockBlock'>
+						<img src='images/fd.gif'>
+						<p class='blockName'>Forward</p>
+						<p class='blockDesc'>Moves David forward in whatever direction he's pointing.</p>
+					</div>
+					<div class='blockBlock'>
+						<img src='images/bk.gif'>
+						<p class='blockName'>Backward</p>
+						<p class='blockDesc'>Moves David in reverse from whatever direction he's pointing.</p>
+					</div>
+					<div class='blockBlock'>
+						<img src='images/lt.gif'>
+						<p class='blockName'>Left</p>
+						<p class='blockDesc'>David turns on the spot to the left.</p>
+					</div>
+					<div class='blockBlock'>
+						<img src='images/rt.gif'>
+						<p class='blockName'>Right</p>
+						<p class='blockDesc'>David turns on the spot to the right.</p>
+					</div>
+				</div>
+				<div class='columns3 blockType'>
+					<div class='blockBlock'>
+						<img src='images/fn1.gif'>
+						<p class='blockName'>Functions</p>
+						<p class='blockDesc'>Acquire function blocks from other David's. They can be used to extend David 6's script.</p>
+					</div>
+					<div class='blockBlock'>
+						<img src='images/lp.gif'>
+						<p class='blockName'>Loops</p>
+						<p class='blockDesc'>Repeat a set of blocks many times over.</p>
+					</div>
+					<div class='blockBlock'>
+						<img src='images/if.gif'>
+						<p class='blockName'>Conditionals</p>
+						<p class='blockDesc'>Check if something is true and then run a set of blocks if it is.</p>
+					</div>
+					<div class='blockBlock'>
+						<img src='images/d2.gif'>
+						<p class='blockName'>David Control Blocks</p>
+						<p class='blockDesc'>Send commands to past past Davids and make use of their different abilities.</p>
+					</div>
+				</div>
+				<div class='columns6 blockType'>
+					<div class='blockBlock'>
+						<img src='images/mysteryBlock.gif'>
+						<p class='blockName2'>So many more...<p>
+						<p class='blockDesc'>There are more blocks to discover within sections and new ones being added all the time so keep playing!</p>
+					</div>
+				</div>
+				<a href='#' class='pixel nextButton invert columns1 left' id='help-4'>next</a>
+			</div>
+		</div>
+	<div class='page help-4' id='Davids'>
+		<div class='content'>
+			<div class='paddingBox'>
+				<h1 class='white'>Meet the Davids</h1>
+				<div class='davidType columns3 firstDavidType'>
+					<img src='images/david1a.png'>
+					<span class='davidSpan columns2 right white'>
+						<p class='version pixel columns2'>David 1</p>
+						<p class='davidDetail columns2'>Controllable <span class='detailResponse pixel'>No</span></p>
+						<p class='davidDetail columns2'>Abilities <span class='detailResponse pixel'>None</span></p>
+					</span>
+					<span class='davidDesCont'>
+						<p class='davidDesc white columns3'>David 1 was the first version of the David rovers sent out. David 1s are light-weight model and are prone to getting stuck in the moss on the planet's surface.</p>
+						<p class='davidDesc white columns3'>Most of the 1s you'll see will be abandoned on the sides of paths where they we're trapped.</p>
+					</span>
+				</div>
+				<div class='davidType columns3'>
+					<img src='images/david2a.png'>
+					<span class='davidSpan columns2 right white'>
+						<p class='version pixel columns2'>David 2</p>
+						<p class='davidDetail columns2'>Controllable <span class='detailResponse pixel'>Yes</span></p>
+						<p class='davidDetail columns2'>Abilities <span class='detailResponse pixel'>Plow</span></p>
+					</span>
+					<span class='davidDesCont'>
+						<p class='davidDesc white columns3'>David 2s are the big guns. Like a small tank not even the worst moss can slow them down and the plow on the front allows them to clear paths for other Davids.</p>
+						<p class='davidDesc white columns3'>Watch out for the soft sand however, David 2s are so heavy they sink right in and get trapped.</p>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+		<footer>
+	<div class='footWrap'>
+		<div class='columns2 left white'>
+			<h1>Credits</h1>
+			<h2>Charlie Harding</h2>
+			<p>Design & development</p>
+			<h2>Amand Gerbault-Gaylor</h2>
+			<p>Music & sound</p>
+		</div>
+		<div class='columns4 right white'>
+		<h1>You might want to check these out too</h1>
+			<div class='left columns2'>
+				<a href='http://scratch.mit.edu/' target='_blank' class='left whiteButton scratch white pixel columns1'>Scratch</a>
+				<p class='left columns2'>Create stories, games, and animations to share with others around the world</p>
+			</div>
+			<div class='right columns2'>
+				<a href='http://www.codecademy.com/' target='_blank' class='left whiteButton scratch white pixel columns1'>Codecademy</a>
+				<p class='left columns2'>Learn to code interactively, for free. You even earn badges. Badges!</p>
+			</div>
+		</div>
+	</div>
+</footer>
+	</div>
+
+<div id='DavidSix'>
+	<img src="images/loading.gif" id="loading">
+</div>
+<div id='exit'>
+	<a class='exitButton' href='#'>X</a>
+</div>
+
+</body>
+</html>
