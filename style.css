@@ -151,11 +151,6 @@ nav {
 	z-index: 2500;
 }
 
-#top-nav a {
-	text-decoration: none;
-	color: #ffffff;
-}
-
 #top-nav ul {
 	display: inline-block;
 }
@@ -187,8 +182,33 @@ nav svg {
 	animation: .6s reverse textShift;  
 }
 
+#top-nav a {
+	text-decoration: none;
+	color: #ffffff;
+	position: relative;
+}
+
 #top-nav a:hover {
 	color: #FF0;
+}
+
+#top-nav a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: .4em;
+  transform: translate(-50%, -57%);
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  transition: width .3s ease-out;
+  background-color: #000;
+}
+
+#top-nav a:hover::after {
+	width: 100%;
+	padding: 0 .6em;
 }
 
 *::-moz-selection {
@@ -287,15 +307,31 @@ body.menu-open {
 	animation: 0.4s slideUpSml ease-in;
 }
 
-#project-wrap span {
+#menu-contain a::after {
+	content: '';
 	position: absolute;
-	width: 120%;
-	height: 1.6vh;
-	background-color: currentColor;
+	display: block;
+	width: 0%;
+	height: .24em;
 	transform: translate(-50%, -30%);
 	top: 50%;
 	left: 50%;
+	z-index: -10;
+	transition: width .3s ease-out;
 }
+
+#menu-contain .current a::after {
+	width: 100%;
+	padding: 0 .24em;
+	background-color: currentColor;
+}
+
+#menu-contain a:hover::after {
+	width: 100%;
+	padding: 0 .24em;
+	background-color: #000;
+}
+
 
 #menu-contain li {
 	margin-left: -0.06em;
@@ -332,6 +368,7 @@ body.menu-open {
 	fill: #FF0;
 	cursor: pointer;
 }
+
 
 /* Animation */
 

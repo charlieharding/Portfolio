@@ -94,20 +94,40 @@ h4 {
 	font-size: 1.25rem;
 	text-decoration: none;
 	line-height: 1;
-	/*border-bottom: solid 4px; */
 	padding: 0 0 .2em;
+	position: relative;
+	z-index: 2;
 }
 
 .out svg { 
 	fill: currentColor;
 	height: 1em;
+  width: 2.5em;
 	margin-left: .5em;
 	margin-bottom: -0.15em;
 }
 
 .out:hover {
-	/* border-bottom: solid 4px #f00; */
 	color: #ff0;
+}
+
+.case-header a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: .4em;
+  transform: translate(-50%, -57%);
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  transition: width .3s ease-out;
+  background-color: #000;
+}
+
+.case-header a:hover::after {
+	width: 100%;
+	padding: 0 .6em;
 }
 
 .right {
@@ -325,6 +345,9 @@ Media queries
 		-moz-column-count: 1;
 		column-count: 1;
   }
+  .mobile-images {
+		padding: 10vh 0;
+	}
   .mobile-images li {
 		height: auto;
 	}
@@ -339,9 +362,6 @@ Media queries
     max-width: 85vw;
     max-height: 80vh;
 	}
-	.mobile-images {
-		padding: 10vh 0;
-	}
 	.mobile-images li {
     padding-left: 4vw;
     padding-right: 4vw;
@@ -351,6 +371,12 @@ Media queries
     max-width: 24vw;
     max-height: 70vh;
   }
+  .long-image li {
+		height: auto;
+		max-height: none;
+		padding-top: 6vh;
+		padding-bottom: 6vh;
+	}
 }
 
 @media (max-width: 1000px) {

@@ -1,6 +1,6 @@
 window.onload = function(){
 
-	var proj_wrap, con_wrap, proj_link, con_link, proj_li, con_li, proj_close_svg, con_close_svg
+	var proj_wrap, con_wrap, proj_link, con_link, proj_li, con_li, proj_close_svg, con_close_svg;
 	var apollo_hov, drive_hov, david_hov, cod_hov;
 	var drive_trigger, david_trigger, cod_trigger, apollo_trigger, drive_home, david_home, cod_home, apollo_home, bigtext_wrap;
 	var hover_list = [];
@@ -151,7 +151,7 @@ window.onload = function(){
 		if(x){
 			el.anchor.className = 'triggered';
 			bigtext_wrap.className = 'home-hov-on';
-			description.className = el.class_replace + ' ' + 'wrap';
+			description.className = el.class_replace + ' ' + 'wrap hide-sub';
 		}else{
 			el.anchor.className = '';
 			bigtext_wrap.className = '';
