@@ -224,6 +224,17 @@ h4 {
 	width: 97.2222%;
 }
 
+.pixel {
+
+image-rendering: -moz-crisp-edges;
+image-rendering: -moz-crisp-edges;
+image-rendering: -o-crisp-edges;
+image-rendering: -webkit-optimize-contrast;
+image-rendering: pixelated;
+-ms-interpolation-mode: nearest-neighbor;
+
+}
+
 .normal-images {
 	box-sizing: border-box;
 	padding: 5vh 0;
@@ -351,6 +362,9 @@ Media queries
   .mobile-images li {
 		height: auto;
 	}
+	.mobile-video li {
+		max-height: none;
+	}
 }
 
 @media (max-width: 1040px) {
@@ -377,6 +391,14 @@ Media queries
 		padding-top: 6vh;
 		padding-bottom: 6vh;
 	}
+	.long-image li img{
+		height: auto;
+		max-height: none;
+	}
+	.mobile-video li {
+		max-height: none;
+		padding: 6vh 0;
+	}
 }
 
 @media (max-width: 1000px) {
@@ -402,6 +424,10 @@ Media queries
 	.vimeo iframe {
 		max-height: 50.625vw;
 		max-width: 90vw;
+	}
+	.mobile-video li {
+		max-height: none;
+		padding: 6vh 0;
 	}
 }
 
@@ -438,8 +464,11 @@ Media queries
 		left: initial;
 		box-shadow: 0px 0px 60px 2px rgba(0, 0, 0, 0.2);
 	}
+	.mobile-video li {
+		max-height: none;
+		padding: 6vh 0;
+	}
 	.long-image li img {
-		max-width: 60vw;
 	  max-height: none;
 	  position: relative;
 	  transform: translate(-50%, 0);
