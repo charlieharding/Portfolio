@@ -517,6 +517,29 @@ footer a {
 	text-decoration: none;
 }
 
+footer ul a:hover {
+	color: #FF0;
+}
+
+footer ul a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: .4em;
+  transform: translate(-50%, -57%);
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+  transition: width .3s ease-out;
+  background-color: #000;
+}
+
+footer ul a:hover::after {
+	width: 100%;
+	padding: 0 .6em;
+}
+
 .main-foot span {
 	position: absolute;
 	width: 120%;
@@ -579,25 +602,24 @@ footer a {
  	background-position: 0% 100%, 100% 100%;
 }
 
-
 .apollo-bg-hov {
-	background-image: url(images/footer/apollo-2400-left.png), url(images/footer/apollo-2400-right.png);
+	background-image: url(assets/footer/apollo-2400-left.png), url(assets/footer/apollo-2400-right.png);
 	background-color: #1c1b1d;
 }
 
 .drive-bg-hov {
-	background-image: url(images/footer/drive-2400-left.png), url(images/footer/drive-2400-right.png);
+	background-image: url(assets/footer/drive-2400-left.png), url(assets/footer/drive-2400-right.png);
 	background-color: #4e4d8b;
 }
 
 .david-bg-hov {
-	background-image: url(images/footer/stars-2400-left.png), url(images/footer/stars-2400-right.png);
+	background-image: url(assets/footer/stars-2400-left.png), url(assets/footer/stars-2400-right.png);
 	background-color: #000000;
 }
 
 .cod-bg-hov {
 	background-position: bottom left, bottom right;
-	background-image: url(images/footer/cod-2400-left.png), url(images/footer/cod-2400-right.png);
+	background-image: url(assets/footer/cod-2400-left.png), url(assets/footer/cod-2400-right.png);
 	background-color: #00b3e6;
 }
 
@@ -613,6 +635,7 @@ footer a {
 		margin-left: 7.142857%;
 	}
 }
+
 @media (max-width: 900px){
 	.cod-bg-hov {
  		background-size: auto 52%, auto 52%;
@@ -645,6 +668,7 @@ footer a {
 		background-size: auto 50%,auto 50%;
 	}
 }
+
 @media (max-width: 680px){
 	#top-nav li {
 		position: relative;
@@ -683,3 +707,16 @@ footer a {
 		background-size: auto 30%, auto 30%;
 	}
 }
+@media (max-width: 400px){
+	#top-nav ul {
+	  display: flex;
+    justify-content: space-between;
+  }
+	#top-nav li {
+		position: relative;
+		float: left;
+	  margin: 30px 0 0 0;
+	  width: auto;
+	  font-size: 1rem;
+	}
+ }

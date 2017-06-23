@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<link href="../style.css" rel="stylesheet" type="text/css">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../assets/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="../../assets/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../../assets/favicon/favicon-16x16.png" sizes="16x16" />
+	<meta name="application-name" content="Charlie Harding – Apollo Demo"/>
+	<meta name="msapplication-TileColor" content="#1D2126" />
+	<meta name="msapplication-TileImage" content="http://www.charlieharding.co.nz/assets/favicon/mstile-144x144.png" />
+<!--<script type="text/javascript" src="http://a13i.net/ext/jquery.min.js"></script>
+<script type="text/javascript" src="http://a13i.net/ext/jquery.json.js"></script>
+<script type="text/javascript" src="http://a13i.net/ext/jquery.jsonrpcclient.js"></script>
+<script type="text/javascript" src="http://a13i.net/js/a13.js"></script> -->
+
+<title>RETRO CONSOLE</title>
+</head>
+<body>
+<a href='../directory.html' class='back'>
+	<svg>
+   	<use xlink:href="../images/back.svg#back-arrow"></use>
+	</svg>
+</a>
+<!-- <body onkeydown="KeyDown(event)"> -->
+<div id="wrapper">
+	<canvas id="view" width="800px" height="600px">
+</div>
+<img class='keyboard' src='assets/keyboard.svg' alt="Available keys">
+<script type="text/javascript" src="../consoleLibrary.js"></script>
+<!-- <script type="text/javascript" src="RETRO_12_M01.js"></script> -->
+<script type="text/javascript" src="RETRO_12_S01.js"></script>
+<script type="text/javascript">
+	//a13 = new A13("ws://a13i.net:8002/rpcws", "RETRO_12_S01");
+	window.onload = function(){
+		RETRO_12_S01.draw();
+		RETRO_12_M01.test_mode = true;
+	};
+</script>
+</body>

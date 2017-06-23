@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  background-color: #000000;
+  color: #ffffff;
+  width:800px;
+  height:600px;
+  position: fixed;
+  top:0px;
+}
+#firstScreenBox1 {
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  top: 87px;
+  left: 150px;
+}
+#firstScreenPic2 {
+  position:fixed;
+  left: -100px;
+}
+#firstScreenPic3 {
+  position: fixed;
+  left: 650px;
+  top: 400px;
+}
+#firstScreenPic4 {
+  position: fixed;
+  left: 0px;
+  top: 400px;
+}
+#h1 {
+  font: 17px;
+  line-height:200%;
+}
+#secondScreen {
+  display: none;
+}
+#secondScreenPic1 {
+  position: fixed;
+  left: 0px;
+  top: -27px;
+}
+#secondScreenBox1 {
+  position: fixed;
+  left: 30px;
+  top: 330px;
+  width: 400px;
+}
+#secondScreenBox2 {
+  position: fixed;
+  left: 480px;
+  top: 330px;
+  height: 20px;
+}
+#deltaV {
+  position: fixed;
+  left: 605px;
+  top: 380px;
+  background-color: black;
+  color: white;
+  border: black;
+  font: 20px;
+  text-align: right;
+}
+#secondScreenBox3 {
+  margin:0;
+  padding:0;
+  position: fixed;
+  left: 730px;
+  top: 382px;
+}
+#secondScreenBox4 {
+  margin: 0;
+  padding: 0;
+  border: 2px solid white; 
+  position: fixed;
+  left: 480px;
+  top: 500px;
+  width: 280px;
+  text-align: center;
+}
+#secondScreenBox5 {
+  position: fixed;
+  left: 30px;
+  top: 460px;
+  width: 400px;
+}
+#caret {
+  position: fixed;
+  left: 440px;
+  top: 375px;
+}
+#apollo {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  left: 670px;
+  top: 165px;
+  -webkit-animation: rotate 5s;
+  -webkit-animation-play-state: paused;
+}
+@-webkit-keyframes rotate {
+  0% {-webkit-transform: rotate(-7deg);}
+  66% {-webkit-transform: rotate(0deg);}
+  70% {-webkit-transform: rotate(5deg);}
+  75% {-webkit-transform: rotate(15deg);}
+  80% {-webkit-transform: rotate(25deg);}
+  85% {-webkit-transform: rotate(35eg);}
+  90% {-webkit-transform: rotate(50deg);}
+  100% {-webkit-transform: rotate(70deg);}
+}
+#trail {
+  position: fixed;
+  left: 800px;
+  top: -27px;
+}
+#globe {
+  position: fixed;
+  left: 0px;
+  top: 135px;
+}
+#globeOutline {
+  position: fixed;
+  left: 35px;
+  top: 133px;
+}
+#path {
+  position: fixed;
+  top: -27px;
+  left: 0px;
+}
+#map {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+#thirdScreen {
+  display: none;
+}
+#landing {
+  position: fixed;
+  top: 350px;
+  left: 0px;
+}

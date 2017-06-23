@@ -1,0 +1,32 @@
+#container {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 800px;
+  height: 600px;
+  background-color: black;
+  font-family: apolloconsoleregular;
+}
+#firstScreen {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+#SM {
+  position: fixed;
+  top: 180px;
+  left: 180px;
+  -webkit-animation: eject 5s linear 1s 1 normal forwards paused;
+  z-index: -1;
+}
+@-webkit-keyframes eject {
+  0% {-webkit-transform: translate(0px, 0px) rotate(0deg);}
+  100% {-webkit-transform: translate(-250px, 0px) rotate(-20deg);}
+}
+#CLM  {
+  position: fixed;
+  top: 280px;
+  left: 180px;
+}
