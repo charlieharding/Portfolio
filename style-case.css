@@ -225,14 +225,12 @@ h4 {
 }
 
 .pixel {
-
-image-rendering: -moz-crisp-edges;
-image-rendering: -moz-crisp-edges;
-image-rendering: -o-crisp-edges;
-image-rendering: -webkit-optimize-contrast;
-image-rendering: pixelated;
--ms-interpolation-mode: nearest-neighbor;
-
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: pixelated;
+	-ms-interpolation-mode: nearest-neighbor;
 }
 
 .normal-images {
@@ -277,6 +275,18 @@ image-rendering: pixelated;
 
 .codriver-images ul {
 	background-color: #e4fcd9;
+}
+
+.trust-images ul {
+	background-color: #fcf1eb;
+}
+
+.mobile-images {
+	margin: 0 1.388888%;
+}
+
+.long-image {
+	margin: 0 1.388888%;
 }
 
 .mobile-images li img {

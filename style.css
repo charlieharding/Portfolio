@@ -220,7 +220,7 @@ body.menu-open {
 
 #menu-contain {
 	height: 0;
-	overflow: hidden;
+	overflow: scroll;
 	background-color: #1D2126;
 	width: 100%;
 	position: fixed;
@@ -233,16 +233,16 @@ body.menu-open {
 }
 
 #menu-contain > div {
-	/*position: absolute;*/
+	position: absolute;
 	height: 100%;
 }
 
 #project-wrap ul {
-	font-size: 10vh;
-	line-height: 16vh; 
+	font-size: 4.95rem;
+	line-height: 7.92rem; 
 	visibility: hidden;
 	position: absolute;
-	top: 50%;
+	top: 120px;
 	width: 57.142857%;
 	margin-left: 21.42857%;
 }
@@ -258,6 +258,10 @@ body.menu-open {
   text-decoration: none;
   color: #fff;
 }
+.menu-open #top-nav ul {
+  padding-bottom: 50px;
+  background: linear-gradient(#1D2126, transparent 100%);
+}
 
 #contact-wrap a:vistied {
 	color: #fff;
@@ -267,8 +271,15 @@ body.menu-open {
 	color: #FF0;
 }
 
+#project-wrap.proj-wrap-open {
+  z-index: 2000;
+}
+
+#contact-wrap.con-wrap-open {
+  z-index: 2000;
+}
+
 #project-wrap.proj-wrap-open ul {
-	transform: translateY(-50%);
 	opacity: 1;
 	animation: 0.8s slideDown ease-out;
 	visibility: visible;
@@ -310,7 +321,7 @@ body.menu-open {
 
 #menu-contain .current a::after {
 	width: 100%;
-	padding: 0 .24em;
+	padding: 0 .12em;
 	background-color: currentColor;
 }
 
@@ -407,16 +418,16 @@ body.menu-open {
 
 @keyframes slideDown {
 	0%{
-		transform: translateY(-55%);
+		transform: translateY(-5%);
 		opacity: 0;
 		visibility: hidden;
 	}
 	50%{
-		transform: translateY(-55%);
+		transform: translateY(-5%);
 		opacity: 0;
 	}
 	to {
-		transform: translateY(-50%);
+		transform: translateY(0%);
 		opacity: 1;
 		visibility: visible;
 	}
@@ -424,12 +435,12 @@ body.menu-open {
 
 @keyframes slideUp {
 	from{
-		transform: translateY(-50%);
+		transform: translateY(0%);
 		opacity: 1;
 		visibility: visible;
 	}
 	to {
-		transform: translateY(-55%);
+		transform: translateY(-5%);
 		opacity: 0;
 		visibility: hidden;
 	}
